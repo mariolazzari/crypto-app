@@ -1,0 +1,25 @@
+{
+    "name": "crypto-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mariolazzari/crypto-app.git"
+    },
+    "author": "Mario Lazzari",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mariolazzari/crypto-app/issues"
+    },
+    "homepage": "https://github.com/mariolazzari/crypto-app#readme",
+    "devDependencies": {
+        "electron": "^2.0.4"
+    },
+    "dependencies": {
+        "electron-reload": "^1.2.5"
+    }
+}
