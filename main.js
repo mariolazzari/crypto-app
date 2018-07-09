@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Menu, shell } = require("electron");
 require("electron-reload")(__dirname);
+const ipc = require("electron").ipcMain;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -15,8 +16,8 @@ function createWindow() {
     // e viene caricato il file index.html della nostra app.
     win.loadFile(__dirname + "/src/index.html");
 
-    // Open the DevTools.
-    //win.webContents.openDevTools();
+    // debug console
+    win.webContents.openDevTools();
 
     // Emesso quando la finestra viene chiusa.
     win.on("closed", () => {
@@ -79,4 +80,8 @@ app.on("activate", () => {
     if (win === null) {
         createWindow();
     }
+});
+
+ipc.on("update-notify-val", (e, arg) => {
+    win.webContents.send("targetPriceVal", arg);
 });
