@@ -17,7 +17,7 @@ function createWindow() {
     win.loadFile(__dirname + "/src/index.html");
 
     // debug console
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
 
     // Emesso quando la finestra viene chiusa.
     win.on("closed", () => {

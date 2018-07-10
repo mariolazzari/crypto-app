@@ -4,7 +4,8 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "package-windows": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32  --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"CryptoApp\""
     },
     "repository": {
         "type": "git",
@@ -17,7 +18,8 @@
     },
     "homepage": "https://github.com/mariolazzari/crypto-app#readme",
     "devDependencies": {
-        "electron": "^2.0.4"
+        "electron": "^2.0.4",
+        "electron-packager": "^12.1.0"
     },
     "dependencies": {
         "axios": "^0.18.0",
